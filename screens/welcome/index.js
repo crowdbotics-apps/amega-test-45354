@@ -1,7 +1,9 @@
 import React from "react";
-import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
+import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({
+  navigation
+}) => {
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
@@ -11,6 +13,7 @@ const WelcomeScreen = () => {
             Let's build something amazing together!
           </Text>
         </View>
+        <Button title="About us" onPress={() => navigation.navigate('AboutScreen')} />
         <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
       </ScrollView>
     </SafeAreaView>;
